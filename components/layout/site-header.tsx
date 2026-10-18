@@ -19,6 +19,17 @@ export function SiteHeader() {
   }, [open]);
 
   useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && open) {
         setOpen(false);
@@ -37,7 +48,9 @@ export function SiteHeader() {
       onClick={() => setOpen(false)}
       aria-current={pathname === link.href ? "page" : undefined}
       className={`nav-link ${pathname === link.href ? "nav-link-active" : ""}`}
-    >{link.label}</Link>
+    >
+      {link.label}
+    </Link>
   ));
 
   return (
@@ -45,10 +58,16 @@ export function SiteHeader() {
       <div className="container header-inner">
         <Link href="/" className="brand-lockup" aria-label="CR Electrics home">
           <Image src={logoImage} alt="" priority className="brand-logo" />
-          <span className="brand-name">CR <span>Electrics</span></span>
+          <span className="brand-name">
+            CR <span>Electrics</span>
+          </span>
         </Link>
-        <nav className="desktop-nav" aria-label="Main navigation">{links}</nav>
-        <Link className="button button-dark header-cta" href="/contact">Get a quote <FaArrowRight aria-hidden="true" /></Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {links}
+        </nav>
+        <Link className="button button-dark header-cta" href="/contact">
+          Get a quote <FaArrowRight aria-hidden="true" />
+        </Link>
         <button
           ref={toggleRef}
           type="button"
@@ -57,13 +76,42 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="mobile-navigation"
           onClick={() => setOpen((value) => !value)}
-        >{open ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}</button>
+        >
+          {open ? (
+            <FaXmark aria-hidden="true" />
+          ) : (
+            <FaBars aria-hidden="true" />
+          )}
+        </button>
       </div>
-      <div id="mobile-navigation" className={`mobile-nav-wrap ${open ? "is-open" : ""}`} hidden={!open} onClick={(event) => { if (event.target === event.currentTarget) setOpen(false); }}>
+      <div
+        id="mobile-navigation"
+        className={`mobile-nav-wrap ${open ? "is-open" : ""}`}
+        hidden={!open}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setOpen(false);
+        }}
+      >
         <nav className="mobile-nav" aria-label="Mobile navigation">
-          <button className="mobile-nav-close" type="button" onClick={() => { setOpen(false); toggleRef.current?.focus(); }} aria-label="Close navigation menu"><FaXmark aria-hidden="true" /></button>
+          <button
+            className="mobile-nav-close"
+            type="button"
+            onClick={() => {
+              setOpen(false);
+              toggleRef.current?.focus();
+            }}
+            aria-label="Close navigation menu"
+          >
+            <FaXmark aria-hidden="true" />
+          </button>
           {links}
-          <Link href="/contact" className="button button-dark mobile-quote" onClick={() => setOpen(false)}>Get a quote <FaArrowRight aria-hidden="true" /></Link>
+          <Link
+            href="/contact"
+            className="button button-dark mobile-quote"
+            onClick={() => setOpen(false)}
+          >
+            Get a quote <FaArrowRight aria-hidden="true" />
+          </Link>
         </nav>
       </div>
     </header>

@@ -110,7 +110,7 @@ export default function HomePage() {
           <div className="hero-visual">
             <div className="hero-image-frame hero-stock-image">
               <Image
-              src="https://unsplash.com/photos/open-industrial-electrical-control-panel-with-wires-and-modules-NAchd3UmxXo"
+              src="https://images.unsplash.com/photo-1780034766312-73825064806c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
                 alt="Warm pendant light in a contemporary home interior; illustrative stock photography"
                 fill
                 priority
