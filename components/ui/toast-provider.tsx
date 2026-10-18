@@ -13,6 +13,8 @@ export function ToastProvider() {
       pauseOnFocusLoss
       draggable
       theme="light"
+      progressClassName="toast-progress"
+      toastClassName="cr-toast"
     />
   );
 }

@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <section className="section services-section">
         <div className="container">
           <div className="service-grid service-grid-page">
-            {services.map((service, index) => (
+            {services.filter((service) => service.slug !== "spotlights").map((service, index) => (
               <ServiceCard key={service.slug} service={service} index={index} />
             ))}
           </div>

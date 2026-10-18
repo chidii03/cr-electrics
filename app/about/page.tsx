@@ -41,6 +41,8 @@ export default function AboutPage() {
           <div className="about-photo">
             <Image
               src={projects[0].image}
+              width={1000}
+              height={1200}
               alt={projects[0].alt}
               sizes="(max-width: 760px) 100vw, 48vw"
               unoptimized
@@ -114,7 +116,7 @@ export default function AboutPage() {
             </Link>
           </div>
           <div className="service-grid">
-            {services.slice(0, 3).map((service, index) => (
+            {services.slice(0, 6).map((service, index) => (
               <ServiceCard key={service.slug} service={service} index={index} />
             ))}
           </div>

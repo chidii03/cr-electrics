@@ -59,8 +59,9 @@ export function SiteHeader() {
           onClick={() => setOpen((value) => !value)}
         >{open ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}</button>
       </div>
-      <div id="mobile-navigation" className={`mobile-nav-wrap ${open ? "is-open" : ""}`} hidden={!open}>
-        <nav className="container mobile-nav" aria-label="Mobile navigation">
+      <div id="mobile-navigation" className={`mobile-nav-wrap ${open ? "is-open" : ""}`} hidden={!open} onClick={(event) => { if (event.target === event.currentTarget) setOpen(false); }}>
+        <nav className="mobile-nav" aria-label="Mobile navigation">
+          <button className="mobile-nav-close" type="button" onClick={() => { setOpen(false); toggleRef.current?.focus(); }} aria-label="Close navigation menu"><FaXmark aria-hidden="true" /></button>
           {links}
           <Link href="/contact" className="button button-dark mobile-quote" onClick={() => setOpen(false)}>Get a quote <FaArrowRight aria-hidden="true" /></Link>
         </nav>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaArrowRight, FaCheck } from "react-icons/fa6";
 import { services, getService } from "@/lib/services";
-import { getProjectImage } from "@/lib/images";
 
 export function generateStaticParams() {
   return services.map(({ slug }) => ({ slug }));
@@ -58,9 +57,11 @@ export default async function ServiceDetailPage({
         <div className="container detail-grid">
           <div className="detail-image">
             <Image
-              src={getProjectImage(service.image)}
-              alt={`Supplied CR Electrics material relevant to ${service.title.toLowerCase()}`}
+              src={service.image}
+              fill
+              alt={`Illustrative image for ${service.title.toLowerCase()}`}
               sizes="(max-width: 760px) 100vw, 50vw"
+              unoptimized
             />
           </div>
           <div>

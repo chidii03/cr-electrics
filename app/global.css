@@ -1420,12 +1420,9 @@ p {
   border-radius: 2px;
   font-size: 13px;
 }
-.Toastify__toast--success {
-  border-left: 4px solid #397653;
-}
-.Toastify__toast--error {
-  border-left: 4px solid #a34c43;
-}
+.cr-toast { border-left: 0 !important; border-radius: 1rem !important; box-shadow: 0 14px 36px rgba(21, 31, 37, .16) !important; }
+.Toastify__toast--success, .Toastify__toast--error { border-left: 0 !important; }
+.toast-progress { height: 5px !important; border-radius: 0 0 1rem 1rem !important; }
 @keyframes fade-up {
   from {
     opacity: 0.4;

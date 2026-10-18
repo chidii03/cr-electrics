@@ -110,7 +110,7 @@ export default function HomePage() {
           <div className="hero-visual">
             <div className="hero-image-frame hero-stock-image">
               <Image
-              src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1600&q=90"
+              src="https://unsplash.com/photos/open-industrial-electrical-control-panel-with-wires-and-modules-NAchd3UmxXo"
                 alt="Warm pendant light in a contemporary home interior; illustrative stock photography"
                 fill
                 priority
@@ -160,7 +160,7 @@ export default function HomePage() {
             body="A considered starting point for projects around your property. Tell us what you need and we’ll confirm whether it’s a good fit."
           />
           <div className="service-grid">
-            {services.map((service, index) => (
+            {services.slice(0, 6).map((service, index) => (
               <ServiceCard key={service.slug} service={service} index={index} />
             ))}
           </div>
@@ -180,13 +180,13 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="A look at the work"
               title="Made for the space it serves."
-              body="A selection of images supplied by CR Electrics. Some are social-media captures; original photographs are preferred for the final portfolio."
+              body="A few ways lighting and power can support the spaces you use every day."
             />
             <Link className="button button-outline" href="/our-work">
               Explore the work <FaArrowRight />
             </Link>
           </div>
-          <ProjectGrid items={projects.slice(0, 3)} />
+          <ProjectGrid items={projects.slice(0, 6)} />
         </div>
       </section>
       <section className="section approach-section">
@@ -208,7 +208,7 @@ export default function HomePage() {
           </div>
           <div className="approach-points">
             <article>
-              <span>01</span>
+              <span><b>01</b></span>
               <div>
                 <h3>Talk it through</h3>
                 <p>
@@ -218,7 +218,7 @@ export default function HomePage() {
               </div>
             </article>
             <article>
-              <span>02</span>
+              <span><b>02</b></span>
               <div>
                 <h3>Understand the job</h3>
                 <p>
@@ -228,7 +228,7 @@ export default function HomePage() {
               </div>
             </article>
             <article>
-              <span>03</span>
+              <span><b>03</b></span>
               <div>
                 <h3>Agree next steps</h3>
                 <p>
@@ -260,8 +260,10 @@ export default function HomePage() {
           </div>
           <div className="review-preview-image">
             <Image
-              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85"
-              alt="Illustrative interior spotlight installation"
+              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85"
+              alt="Illustrative electrical installation work"
+              width={1000}
+              height={1200}
               sizes="(max-width: 800px) 100vw, 44vw"
               unoptimized
             />
