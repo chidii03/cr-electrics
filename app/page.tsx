@@ -260,7 +260,7 @@ export default function HomePage() {
           </div>
           <div className="review-preview-image">
             <Image
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85"
+              src="https://images.unsplash.com/photo-1660330589693-99889d60181e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
               alt="Illustrative electrical installation work"
               width={1000}
               height={1200}

@@ -1,17 +1,135 @@
-export type Service = { slug: string; title: string; short: string; intro: string; detail: string; icon: "light" | "bolt" | "panel" | "test" | "camera"; image: string };
+export type Service = {
+  slug: string;
+  title: string;
+  short: string;
+  intro: string;
+  detail: string;
+  icon: "light" | "bolt" | "panel" | "test" | "camera";
+  image: string;
+};
 
 // Stock photography is illustrative. Customer review screenshots remain confined to /reviews.
 export const services: Service[] = [
-  { slug: "lighting-installations", title: "Lighting installations", short: "Internal and external lighting planned around the way you use a space.", intro: "Lighting changes how a space feels and works. Tell us what you have in mind and we can discuss the right next steps.", detail: "Share the room, fitting or outdoor area you are considering, along with any plans or reference photos, so the scope can be discussed.", icon: "light", image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "fuseboard-consumer-unit-upgrades", title: "Consumer-unit upgrades", short: "A clear starting point for fuseboard and consumer-unit enquiries.", intro: "If you are considering a consumer-unit or fuseboard project, get in touch with details about the property and what you need.", detail: "Every enquiry is reviewed individually. Share useful property details and any context around the existing installation so the project can be discussed properly.", icon: "panel", image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "outdoor-sockets", title: "Outdoor sockets", short: "Power where you need it for gardens, garages and outdoor spaces.", intro: "Tell us where you need outdoor power and what you plan to use it for.", detail: "The location, intended use and property details help establish whether the work can be supported and what needs to be considered.", icon: "bolt", image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "indoor-sockets", title: "Indoor sockets", short: "Additional or relocated sockets for a more practical room layout.", intro: "Share the room, preferred socket position and any relevant property details.", detail: "A short description, photographs and a plan of where power is needed provide a useful starting point for discussing the work.", icon: "bolt", image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "spotlights", title: "Spotlights", short: "Focused lighting that supports everyday spaces and features.", intro: "Considering spotlights? Include the room and the look or layout you have in mind.", detail: "Share any plans or reference photos so the layout, fittings and practical requirements can be discussed.", icon: "light", image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "garden-lighting", title: "Garden lighting", short: "Lighting ideas for paths, seating areas and outdoor living spaces.", intro: "Describe the outdoor space and the lighting you are considering.", detail: "The layout, desired effect and property details are useful starting points when discussing a garden-lighting enquiry.", icon: "light", image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "led-lighting", title: "LED lighting", short: "Efficient lighting options for the places you use every day.", intro: "Share what you would like to illuminate and any fittings or plans you are considering.", detail: "Contact CR Electrics to discuss the space and confirm whether the specific work is available for your project.", icon: "light", image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "rewires", title: "Rewires", short: "A considered conversation about the requirements of your property.", intro: "A rewire enquiry depends on the property and scope involved.", detail: "Start with the building type, location and what you know about the existing installation. Scope, suitability and next steps are agreed for each property.", icon: "bolt", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "eicr-electrical-testing", title: "EICR & electrical testing", short: "Inspection and testing enquiries discussed around your property.", intro: "Contact CR Electrics to discuss the property, the type of testing you need and any relevant context.", detail: "Suitability, scope and any documentation are discussed directly for each job; include useful detail in your enquiry.", icon: "test", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85" },
-  { slug: "cctv-installation", title: "CCTV installation", short: "Discuss CCTV coverage and options for your property.", intro: "Share the areas you would like to cover and any requirements you already have.", detail: "CCTV appears in the supplied business profile. Contact CR Electrics to confirm whether your specific project and location can be supported.", icon: "camera", image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=85" }
+  {
+    slug: "lighting-installations",
+    title: "Lighting installations",
+    short:
+      "Internal and external lighting planned around the way you use a space.",
+    intro:
+      "Lighting changes how a space feels and works. Tell us what you have in mind and we can discuss the right next steps.",
+    detail:
+      "Share the room, fitting or outdoor area you are considering, along with any plans or reference photos, so the scope can be discussed.",
+    icon: "light",
+    image:
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "fuseboard-consumer-unit-upgrades",
+    title: "Consumer-unit upgrades",
+    short: "A clear starting point for fuseboard and consumer-unit enquiries.",
+    intro:
+      "If you are considering a consumer-unit or fuseboard project, get in touch with details about the property and what you need.",
+    detail:
+      "Every enquiry is reviewed individually. Share useful property details and any context around the existing installation so the project can be discussed properly.",
+    icon: "panel",
+    image:
+      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "outdoor-sockets",
+    title: "Outdoor sockets",
+    short: "Power where you need it for gardens, garages and outdoor spaces.",
+    intro:
+      "Tell us where you need outdoor power and what you plan to use it for.",
+    detail:
+      "The location, intended use and property details help establish whether the work can be supported and what needs to be considered.",
+    icon: "bolt",
+    image:
+      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "indoor-sockets",
+    title: "Indoor sockets",
+    short: "Additional or relocated sockets for a more practical room layout.",
+    intro:
+      "Share the room, preferred socket position and any relevant property details.",
+    detail:
+      "A short description, photographs and a plan of where power is needed provide a useful starting point for discussing the work.",
+    icon: "bolt",
+    image:
+      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "spotlights",
+    title: "Spotlights",
+    short: "Focused lighting that supports everyday spaces and features.",
+    intro:
+      "Considering spotlights? Include the room and the look or layout you have in mind.",
+    detail:
+      "Share any plans or reference photos so the layout, fittings and practical requirements can be discussed.",
+    icon: "light",
+    image:
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "garden-lighting",
+    title: "Garden lighting",
+    short: "Lighting ideas for paths, seating areas and outdoor living spaces.",
+    intro: "Describe the outdoor space and the lighting you are considering.",
+    detail:
+      "The layout, desired effect and property details are useful starting points when discussing a garden-lighting enquiry.",
+    icon: "light",
+    image:
+      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "led-lighting",
+    title: "LED lighting",
+    short: "Efficient lighting options for the places you use every day.",
+    intro:
+      "Share what you would like to illuminate and any fittings or plans you are considering.",
+    detail:
+      "Contact CR Electrics to discuss the space and confirm whether the specific work is available for your project.",
+    icon: "light",
+    image:
+      "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "rewires",
+    title: "Rewires",
+    short: "A considered conversation about the requirements of your property.",
+    intro: "A rewire enquiry depends on the property and scope involved.",
+    detail:
+      "Start with the building type, location and what you know about the existing installation. Scope, suitability and next steps are agreed for each property.",
+    icon: "bolt",
+    image:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "eicr-electrical-testing",
+    title: "EICR & electrical testing",
+    short: "Inspection and testing enquiries discussed around your property.",
+    intro:
+      "Contact CR Electrics to discuss the property, the type of testing you need and any relevant context.",
+    detail:
+      "Suitability, scope and any documentation are discussed directly for each job; include useful detail in your enquiry.",
+    icon: "test",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
+  },
+  {
+    slug: "cctv-installation",
+    title: "CCTV installation",
+    short: "Discuss CCTV coverage and options for your property.",
+    intro:
+      "Share the areas you would like to cover and any requirements you already have.",
+    detail:
+      "CCTV appears in the supplied business profile. Contact CR Electrics to confirm whether your specific project and location can be supported.",
+    icon: "camera",
+    image:
+      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=85",
+  },
 ];
 
-export const getService = (slug: string) => services.find((service) => service.slug === slug);
+export const getService = (slug: string) =>
+  services.find((service) => service.slug === slug);
