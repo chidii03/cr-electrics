@@ -21,7 +21,7 @@ export const services: Service[] = [
       "Share the room, fitting or outdoor area you are considering, along with any plans or reference photos, so the scope can be discussed.",
     icon: "light",
     image:
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1786455588142-c5ae046dcd0f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "fuseboard-consumer-unit-upgrades",
@@ -33,7 +33,7 @@ export const services: Service[] = [
       "Every enquiry is reviewed individually. Share useful property details and any context around the existing installation so the project can be discussed properly.",
     icon: "panel",
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1635335874521-7987db781153?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "outdoor-sockets",
@@ -45,7 +45,7 @@ export const services: Service[] = [
       "The location, intended use and property details help establish whether the work can be supported and what needs to be considered.",
     icon: "bolt",
     image:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1698241255956-ff8759135df2?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "indoor-sockets",
@@ -57,7 +57,7 @@ export const services: Service[] = [
       "A short description, photographs and a plan of where power is needed provide a useful starting point for discussing the work.",
     icon: "bolt",
     image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85",
+      "https://plus.unsplash.com/premium_photo-1683127814960-3a97c4f0d882?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "spotlights",
@@ -69,7 +69,7 @@ export const services: Service[] = [
       "Share any plans or reference photos so the layout, fittings and practical requirements can be discussed.",
     icon: "light",
     image:
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1727096857692-e9dadf2bc92e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "garden-lighting",
@@ -80,7 +80,7 @@ export const services: Service[] = [
       "The layout, desired effect and property details are useful starting points when discussing a garden-lighting enquiry.",
     icon: "light",
     image:
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1763091637367-bcd33b348884?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     slug: "led-lighting",
@@ -117,18 +117,7 @@ export const services: Service[] = [
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85",
   },
-  {
-    slug: "cctv-installation",
-    title: "CCTV installation",
-    short: "Discuss CCTV coverage and options for your property.",
-    intro:
-      "Share the areas you would like to cover and any requirements you already have.",
-    detail:
-      "CCTV appears in the supplied business profile. Contact CR Electrics to confirm whether your specific project and location can be supported.",
-    icon: "camera",
-    image:
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=85",
-  },
+  
 ];
 
 export const getService = (slug: string) =>
