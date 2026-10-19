@@ -1,62 +1,29 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Privacy notice",
   description:
-    "How CR Electrics uses information submitted through this website's quote enquiry form.",
+    "How CR Electrics collects, uses, protects and shares personal information from website enquiries.",
   alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
   return (
     <article className="container legal-page">
-      <p className="eyebrow">Website information</p>
-      <h1>
-        Privacy <em>notice.</em>
-      </h1>
-      <p className="legal-updated">Last reviewed: 17 October 2026</p>
-      <h2>Who receives your enquiry</h2>
-      <p>
-        This website is for CR Electrics, a Liverpool-based electrical business.
-        The contact for privacy questions is{" "}
-        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>. The legal
-        identity and data-controller details should be confirmed by the business
-        before launch.
-      </p>
-      <h2>Information collected</h2>
-      <p>
-        If you use the quote form, it collects your name, email address,
-        optional telephone number, service enquiry, optional area, contact
-        preference, preferred timing and project details. The website does not
-        accept image uploads.
-      </p>
-      <h2>Why it is used</h2>
-      <p>
-        Information is used to review and respond to your enquiry. Form
-        submissions are sent by email to the configured CR Electrics recipient.
-        The site does not claim to send a reply within a particular time.
-      </p>
-      <h2>How long it is kept</h2>
-      <p>
-        Retention periods and the process for deleting enquiries must be
-        confirmed and configured by CR Electrics. Please contact the email above
-        with a data request.
-      </p>
-      <h2>Service providers and security</h2>
-      <p>
-        Website hosting and the configured email provider may process enquiry
-        information to deliver the service. SMTP credentials are stored only in
-        server environment variables. The business should update this notice if
-        its provider or practices change.
-      </p>
-      <h2>Your choices</h2>
-      <p>
-        You can contact CR Electrics to ask about, correct or request deletion
-        of information submitted through the form. The business should confirm
-        its lawful basis and complete controller details before accepting live
-        enquiries.
-      </p>
+      <p className="eyebrow">Your information</p>
+      <h1>Privacy <em>notice.</em></h1>
+      <p className="legal-updated">Last updated: 19 October 2026</p>
+      <p className="legal-intro">This notice explains what personal information CR Electrics receives, why it is used and the choices available to you. It applies to this website and to enquiries made through its contact routes.</p>
+      <aside className="legal-callout"><strong>A quick summary</strong><p>We use your enquiry details to understand and respond to your request. We do not sell personal information. You can contact us to ask about, correct or request deletion of your information, subject to any legal reason we need to retain it.</p></aside>
+      <nav className="legal-contents" aria-label="Privacy notice contents"><strong>On this page</strong><ol><li><a href="#controller">Who is responsible</a></li><li><a href="#data">Information we collect</a></li><li><a href="#use">How and why we use it</a></li><li><a href="#sharing">Sharing, security and retention</a></li><li><a href="#rights">Your rights and choices</a></li><li><a href="#contact">Questions and complaints</a></li></ol></nav>
+      <section id="controller"><h2>1. Who is responsible for your information</h2><p>CR Electrics is responsible for the personal information it collects for its own business purposes through this website. For privacy questions or requests, contact <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>. The business should ensure that its full legal trading identity and registered address, where applicable, are included in its customer documentation before processing live project information.</p><p>This notice is designed to provide clear information at the point an enquiry is made. It should be read alongside our <Link href="/terms-of-service">Terms of service</Link> and <Link href="/cookie-policy">Cookie policy</Link>.</p></section>
+      <section id="data"><h2>2. Information we may collect</h2><p>What we receive depends on how you contact us and what you choose to provide. It may include:</p><ul><li>your name, email address, telephone number and preferred way to be contacted;</li><li>the property area, service requested, preferred timing and details of the work you would like to discuss;</li><li>messages, quotations, appointment notes and correspondence connected with your enquiry or project;</li><li>information you choose to provide about access, existing equipment or project requirements; and</li><li>limited technical information needed to operate and protect the website, such as device, browser or server-log information.</li></ul><p>Please do not send unnecessary sensitive personal information through the website, such as bank details, identity documents, passwords, health information or information about another person unless it is necessary and you are authorised to share it. The website quote form does not accept image uploads.</p><h3>Where the information comes from</h3><p>Usually it comes directly from you. It may also come from someone who contacts us on your behalf, such as a landlord, tenant, contractor or property manager, or from messages sent through a third-party platform that you choose to use. If you provide another person’s details, you should make sure you have their permission where needed.</p></section>
+      <section id="use"><h2>3. How and why we use information</h2><p>We may use personal information to:</p><ul><li>read, assess and respond to an enquiry;</li><li>arrange a survey, appointment or project discussion;</li><li>prepare and administer quotations, invoices, project records and customer communications;</li><li>protect the website, prevent misuse and keep records needed to resolve queries or disputes; and</li><li>meet legal, regulatory, accounting, insurance or safety obligations where they apply.</li></ul><h3>Our lawful basis</h3><p>Depending on the context, we process information because it is needed to take steps at your request before entering a contract or to perform a contract with you; because we have a legitimate business interest in responding to genuine enquiries, running the service securely and managing our records; or because a legal obligation applies. Where we rely on consent for a separate optional activity, we will ask for it clearly and you can withdraw it at any time.</p><h3>Marketing</h3><p>An enquiry is not permission to send unrelated marketing. If CR Electrics introduces newsletters, promotions or similar direct marketing, the business should provide the appropriate choice and update this notice before using enquiry information for that purpose.</p></section>
+      <section id="sharing"><h2>4. Sharing, security and retention</h2><h3>Who may receive information</h3><p>Information is shared only where reasonably necessary to run the business or deliver a requested service. This can include the website host, email provider, IT support or other service providers acting on CR Electrics’ instructions; professional advisers, insurers or authorities where required; and, for a specific project, suppliers or contractors where this has been discussed with you or is necessary to deliver the agreed work. We do not sell personal information.</p><h3>External services</h3><p>Links to WhatsApp, social networks, email services and other external platforms are controlled by those providers once you leave this site. They may collect information under their own privacy notices. Please review their policies before using those services.</p><h3>Security</h3><p>We use reasonable organisational and technical measures to protect information from unauthorised access, loss or misuse. No internet transmission or email system is completely secure, so please avoid sending sensitive information by email unless it is necessary and an appropriate method has been agreed.</p><h3>How long we keep information</h3><p>We keep enquiry and project information only for as long as reasonably needed for the purpose it was collected, to answer follow-up questions, maintain business records and meet applicable legal, tax, insurance or regulatory obligations. The exact period can vary by the nature of the enquiry or project. When information is no longer required, it should be securely deleted or anonymised in line with the business’s retention process.</p><h3>International transfers</h3><p>Some providers used for website hosting, email or communications may process information outside the UK. Where this occurs, the business should ensure an appropriate lawful transfer mechanism and safeguards are in place. You may contact us for more information about the providers relevant to your enquiry.</p></section>
+      <section id="rights"><h2>5. Your rights and choices</h2><p>Data-protection law may give you rights in relation to your personal information. Depending on the circumstances, these include the right to ask for access, correction, erasure, restriction of processing, objection to processing based on legitimate interests, and data portability. You may also withdraw consent where consent is the basis used for processing.</p><p>To make a request, email <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> with enough information for us to identify the relevant records. We may need to verify your identity before acting. Your rights are not absolute, so we may need to retain or withhold certain information where a legal exemption or obligation applies; if so, we will explain the position where we can.</p><h3>Children</h3><p>This site is intended for people seeking electrical services for a property or business. It is not directed at children. If you believe a child has provided personal information without appropriate authority, please contact us so the matter can be reviewed.</p></section>
+      <section id="contact"><h2>6. Questions, complaints and changes</h2><p>Contact us first at <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> if you have a privacy question or concern. If you are unhappy with how your information has been handled, you may also have the right to complain to the UK Information Commissioner’s Office (ICO). Information about making a complaint is available on the ICO website.</p><p>We may update this notice when our website, service providers or data practices change. The date at the top shows when it was last updated. Material changes should be made available here before they affect how information is used.</p></section>
     </article>
   );
 }

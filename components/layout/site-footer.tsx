@@ -25,7 +25,6 @@ export function SiteFooter() {
             Electrical installations, lighting and related work from a
             Liverpool-based business.
           </p>
-          <p className="footer-area">{siteConfig.serviceArea}</p>
         </div>
         <div className="footer-column">
           <h2>Explore</h2>

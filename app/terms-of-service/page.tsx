@@ -1,42 +1,28 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Website terms",
-  description:
-    "Terms for using the CR Electrics website and quote enquiry form.",
+  title: "Terms of service",
+  description: "Terms for using the CR Electrics website, requesting a quote and arranging electrical work.",
   alternates: { canonical: "/terms-of-service" },
 };
 
 export default function TermsPage() {
   return (
     <article className="container legal-page">
-      <p className="eyebrow">Website information</p>
-      <h1>
-        Website <em>terms.</em>
-      </h1>
-      <p>
-        Information on this website is a general introduction to the types of
-        electrical work referenced in material supplied for CR Electrics. It is
-        not a quotation, technical assessment or confirmation that a particular
-        service, location or project is available.
-      </p>
-      <h2>Project enquiries</h2>
-      <p>
-        Submitting an enquiry does not book work or create an agreement. Scope,
-        suitability, quotation and scheduling are discussed directly and agreed
-        before work proceeds.
-      </p>
-      <h2>Images and content</h2>
-      <p>
-        Images are supplied by CR Electrics. Some are social-media screenshots
-        and may contain platform interface elements. Content should not be
-        reused without the relevant permission.
-      </p>
-      <h2>Contact</h2>
-      <p>
-        For website questions, contact CR Electrics by email at
-        cr.electrics@outlook.com.
-      </p>
+      <p className="eyebrow">Important information</p>
+      <h1>Terms of <em>service.</em></h1>
+      <p className="legal-updated">Last updated: 19 October 2026</p>
+      <p className="legal-intro">These terms explain how this website, project enquiries and any agreed electrical work are handled by {siteConfig.name}. Please read them before sending an enquiry or approving a quotation. They are written in plain English and do not remove any rights you have by law.</p>
+      <aside className="legal-callout"><strong>In an emergency</strong><p>Do not rely on this website, email or WhatsApp for urgent help. If there is immediate danger, fire, electric shock, exposed live parts or a serious safety concern, move to safety and contact the emergency services or the appropriate network operator.</p></aside>
+      <nav className="legal-contents" aria-label="Terms contents"><strong>On this page</strong><ol><li><a href="#website">Using this website</a></li><li><a href="#enquiries">Enquiries, surveys and quotations</a></li><li><a href="#work">Arranging and carrying out work</a></li><li><a href="#payments">Prices, payments and changes</a></li><li><a href="#consumer">Consumer rights and cancellations</a></li><li><a href="#contact">Contact and complaints</a></li></ol></nav>
+      <section id="website"><h2>1. Using this website</h2><p>The website is a general introduction to the services offered by CR Electrics. It is not technical advice for a particular property, confirmation that work is suitable, a guarantee of availability or a binding offer to carry out work.</p><p>Electrical work should be assessed in the context of the actual installation. Information, images and service descriptions may change as the business develops. Please contact us to confirm the service, area, timescale and any current requirements for your project.</p><h3>Use of the site</h3><p>You may use the site for lawful, personal or business enquiry purposes. You must not:</p><ul><li>interfere with, damage or try to gain unauthorised access to the site or its forms;</li><li>submit false, misleading, abusive or unlawful material;</li><li>use another person’s contact details without their permission; or</li><li>copy, republish or commercially use site content without permission.</li></ul></section>
+      <section id="enquiries"><h2>2. Enquiries, surveys and quotations</h2><p>A website form, email, telephone call, WhatsApp message or social-media message is an enquiry only. Sending one does not reserve a date, create a contract or oblige either party to proceed.</p><h3>Information we may need</h3><p>To understand a project, we may ask about the property, the work you want, access, timing, the condition of the existing installation and any relevant drawings, reports or photographs. Please provide accurate and complete information. If key details change, tell us promptly so that scope, safety, timing and price can be reviewed.</p><h3>Surveys and estimates</h3><p>Some work cannot be priced safely or accurately until a site visit or further investigation. An estimate is an informed indication, not a fixed price, unless the written quotation clearly says otherwise. Hidden conditions, changes requested by you, supplier price changes, access restrictions and additional safety work can affect the final cost and programme.</p><h3>Accepting a quotation</h3><p>A contract is formed only when CR Electrics confirms acceptance of the work in writing, or otherwise clearly agrees to start work. The quotation, invoice, scope, agreed variations and any written project terms form the agreement for that job. If there is a conflict, the specific written quotation takes priority over this website page.</p></section>
+      <section id="work"><h2>3. Arranging and carrying out work</h2><h3>Access and preparation</h3><p>You are responsible for arranging safe, timely access to the property, disclosing known hazards and ensuring that the person instructing us has authority to do so. Please keep children, pets, tenants and other occupants clear of work areas where requested, and protect or remove valuable or fragile items before work starts.</p><p>Electrical investigation can require isolation of circuits, testing, lifting access panels or making good access to equipment. Where reasonable, we will explain expected disruption in advance. We cannot promise that every fault, concealed cable, historic alteration or building defect can be identified without further work.</p><h3>Safety and compliance</h3><p>Work will be discussed against the condition and requirements found at the property. Where certification, notification, inspection results or manufacturer information applies, the documents to be provided will be set out for the specific job. A passed test or completed item relates only to the scope and date stated in its relevant documentation; it is not a warranty for unrelated parts of an installation.</p><h3>Dates and delays</h3><p>Any dates are targets unless expressly agreed in writing as fixed. Delays may occur because of access, weather, supplier availability, hidden conditions, utility or network issues, other trades or events outside reasonable control. We will aim to communicate material changes and agree a sensible next step.</p></section>
+      <section id="payments"><h2>4. Prices, payments and changes</h2><p>Pricing, any deposit, stage payment, materials charge, call-out fee, payment method and due date will be set out in the relevant quotation or invoice. Please check these documents before approving work. Unless expressly agreed otherwise, amounts shown are in pounds sterling.</p><h3>Variations to the scope</h3><p>If you ask for additional work, change the specification, or a survey reveals work not reasonably apparent when the price was prepared, we will explain the effect on cost and timing before proceeding where practicable. Verbal requests should be confirmed in writing to avoid misunderstandings.</p><h3>Materials and third-party items</h3><p>Material availability, lead times and manufacturer warranties are controlled by suppliers and manufacturers. Where you provide products or ask us to work with existing equipment, we may need to limit the scope or decline work if the item appears unsuitable, unsafe or non-compliant. Any manufacturer warranty is separate from the service carried out by CR Electrics.</p></section>
+      <section id="consumer"><h2>5. Consumer rights and cancellations</h2><p>If you are a consumer, you may have cancellation and other statutory rights, particularly for certain agreements made at a distance or away from business premises. The exact position depends on the contract, the work and how it was agreed. These terms do not limit those rights.</p><p>Before any work begins, you will receive the project-specific terms and information that apply to your agreement. If you ask for work to begin during a cancellation period, there may be consequences for work already supplied; any such request and acknowledgement should be recorded in the job documentation. Contact us promptly if you want to change, postpone or cancel an agreed appointment.</p></section>
+      <section id="contact"><h2>6. Content, liability, complaints and contact</h2><h3>Content and links</h3><p>The text, branding, photographs and layout on this website belong to CR Electrics or are used with permission. Social-media, WhatsApp and other external links lead to services with their own terms and privacy practices. CR Electrics does not control those sites or accept responsibility for their content or availability.</p><h3>Our responsibility</h3><p>Nothing in these terms excludes or limits liability where it would be unlawful to do so. Subject to that, website material is provided for general information and you should not rely on it as a substitute for a site-specific electrical assessment or professional advice. Any project-specific responsibility is governed by the agreement for that project.</p><h3>Questions or complaints</h3><p>Please raise a concern as soon as possible, with your name, property address (where relevant), job or invoice reference and a clear description of the issue. Contact CR Electrics at <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> or <a href={`tel:${siteConfig.phoneHref}`}>{siteConfig.phoneDisplay}</a>. Read our <Link href="/privacy">Privacy notice</Link> and <Link href="/cookie-policy">Cookie policy</Link> for information about how enquiries are handled.</p></section>
     </article>
   );
 }

@@ -19,10 +19,6 @@ export function SiteHeader() {
   }, [open]);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -54,7 +50,8 @@ export function SiteHeader() {
   ));
 
   return (
-    <header className="site-header">
+    <>
+      <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand-lockup" aria-label="CR Electrics home">
           <Image src={logoImage} alt="" priority className="brand-logo" />
@@ -84,6 +81,7 @@ export function SiteHeader() {
           )}
         </button>
       </div>
+      </header>
       <div
         id="mobile-navigation"
         className={`mobile-nav-wrap ${open ? "is-open" : ""}`}
@@ -114,6 +112,6 @@ export function SiteHeader() {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

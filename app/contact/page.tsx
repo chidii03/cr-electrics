@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import {
   FaArrowUpRightFromSquare,
+  FaArrowDown,
   FaEnvelope,
   FaPhone,
   FaWhatsapp,
@@ -36,6 +37,9 @@ export default function ContactPage() {
             A few details about the work will help us understand your enquiry.
             We’ll review it and discuss suitable next steps with you.
           </p>
+          <a className="contact-scroll-cue" href="#contact-form">
+            Start your enquiry <FaArrowDown aria-hidden="true" />
+          </a>
         </div>
       </section>
       <section className="section contact-section">
@@ -100,7 +104,7 @@ export default function ContactPage() {
               </p>
             </div>
           </div>
-          <div className="form-panel">
+          <div className="form-panel" id="contact-form">
             <div className="form-panel-heading">
               <p className="eyebrow">Quote enquiry</p>
               <h2>Start with the basics.</h2>

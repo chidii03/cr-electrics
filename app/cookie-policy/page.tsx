@@ -1,58 +1,28 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Cookie policy",
   description:
-    "How CR Electrics uses cookies and similar technologies on this website.",
+    "Details of how CR Electrics uses cookies and similar technologies on this website.",
+  alternates: { canonical: "/cookie-policy" },
 };
 
 export default function CookiePolicy() {
   return (
     <article className="container legal-page">
-      <p className="eyebrow">
-        <span className="eyebrow-line" /> Legal information
-      </p>
-      <h1>
-        Cookie <em>policy.</em>
-      </h1>
-      <p className="legal-updated">Last updated: 18 October 2026</p>
-      <p>
-        This policy explains how the CR Electrics website may use cookies or
-        similar technologies. It is written for visitors and should be reviewed
-        if analytics, advertising, chat widgets or other third-party tools are
-        added.
-      </p>
-      <h2>What cookies are</h2>
-      <p>
-        Cookies are small text files stored by your browser. They can help a
-        website remember preferences, keep a service working, or understand how
-        pages are used.
-      </p>
-      <h2>Cookies used on this website</h2>
-      <p>
-        This website does not intentionally set non-essential analytics or
-        advertising cookies as part of its core pages. Essential technical
-        storage may be used by the browser or hosting platform to deliver the
-        site securely and reliably.
-      </p>
-      <h2>Third-party links</h2>
-      <p>
-        Links to WhatsApp, social networks, email providers and other external
-        services open services with their own cookie and privacy practices.
-        Their cookies are controlled by those providers, not by CR Electrics.
-      </p>
-      <h2>Your choices</h2>
-      <p>
-        You can manage or delete cookies through your browser settings. Blocking
-        some cookies can affect the way websites work. If non-essential cookies
-        are introduced in future, this page and any consent controls should be
-        updated before they are used.
-      </p>
-      <h2>Questions</h2>
-      <p>
-        For questions about this policy, contact CR Electrics at{" "}
-        <a href="mailto:cr.electrics@outlook.com">cr.electrics@outlook.com</a>.
-      </p>
+      <p className="eyebrow">Website information</p>
+      <h1>Cookie <em>policy.</em></h1>
+      <p className="legal-updated">Last updated: 19 October 2026</p>
+      <p className="legal-intro">This policy explains what cookies are, what this website currently uses and how you can control them. It should be read with our <Link href="/privacy">Privacy notice</Link>.</p>
+      <aside className="legal-callout"><strong>Current position</strong><p>CR Electrics does not intentionally use advertising or analytics cookies on its core website pages. If that changes, this policy and any required consent controls must be updated before the new technology is used.</p></aside>
+      <nav className="legal-contents" aria-label="Cookie policy contents"><strong>On this page</strong><ol><li><a href="#what">What cookies are</a></li><li><a href="#current">What this site currently uses</a></li><li><a href="#third-party">Third-party services</a></li><li><a href="#choices">Your choices</a></li><li><a href="#future">Future changes and contact</a></li></ol></nav>
+      <section id="what"><h2>1. What cookies and similar technologies are</h2><p>Cookies are small text files that a website can ask your browser to store. Similar technologies can include local storage, pixels, tags or identifiers. They can be used to make a site function, remember a preference, measure use, improve performance or support advertising.</p><p>Cookies may be session cookies, which normally expire when you close your browser, or persistent cookies, which remain until they expire or are deleted. First-party cookies are set by the site you are visiting; third-party cookies are set by another provider whose service appears on or is linked from a page.</p></section>
+      <section id="current"><h2>2. What this website currently uses</h2><p>The core CR Electrics pages are designed to provide information and a quote enquiry route without intentionally setting non-essential analytics, advertising or personalisation cookies. The website does not currently present a cookie-preference banner because it is not intended to use those non-essential categories.</p><div className="legal-table-wrap"><table><thead><tr><th>Category</th><th>Current use</th><th>Purpose</th></tr></thead><tbody><tr><td>Strictly necessary</td><td>May be used by the browser or hosting environment where technically required.</td><td>To deliver, secure and operate the website.</td></tr><tr><td>Preferences</td><td>Not intentionally used by CR Electrics.</td><td>Would remember choices such as display settings.</td></tr><tr><td>Analytics</td><td>Not intentionally used by CR Electrics.</td><td>Would measure visits and page use.</td></tr><tr><td>Advertising</td><td>Not intentionally used by CR Electrics.</td><td>Would support advertising or cross-site tracking.</td></tr></tbody></table></div><p>Hosting, security and browser functions can evolve. This policy does not override information your browser, device or network may process independently to establish a connection or protect against abuse.</p></section>
+      <section id="third-party"><h2>3. Third-party services and external links</h2><p>This site includes links that may take you to services such as WhatsApp, email providers and social-media platforms. Once you follow a link, that provider may place cookies or use similar technologies under its own rules. Those technologies are not controlled by CR Electrics, even where the link appears on our website.</p><p>We recommend reviewing the privacy and cookie information supplied by the third-party service before using it, particularly if you are signed in to that service. You can also choose to contact us by email at <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> or telephone on <a href={`tel:${siteConfig.phoneHref}`}>{siteConfig.phoneDisplay}</a> instead.</p></section>
+      <section id="choices"><h2>4. Your cookie choices</h2><p>Most browsers let you view, block or delete cookies through their settings. Your browser’s help section will explain how to do this. You can normally set rules for all sites or for individual sites, and you may be able to clear data when the browser closes.</p><p>Blocking strictly necessary storage can affect the reliability, security or features of some websites. Deleting cookies does not stop a site from asking to set them again on a later visit. Controls in third-party apps and services are managed separately by those providers.</p><h3>Do Not Track and browser signals</h3><p>Browser privacy signals are not applied consistently across all technologies and services. As this site is not intended to use non-essential analytics or advertising cookies, it does not currently operate a separate response mechanism for such signals.</p></section>
+      <section id="future"><h2>5. Future changes, questions and updates</h2><p>Before adding analytics, advertising, chat widgets, embedded media or another optional technology that stores or accesses information on a visitor’s device, CR Electrics should assess the technology, update this policy and provide an appropriate consent choice where required. Consent for optional cookies should be as easy to refuse or withdraw as it is to give.</p><p>If you have a question about this policy or believe a cookie has been set unexpectedly, contact <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> with the page you visited, approximate time and your browser or device details if you are comfortable sharing them. We may update this policy as the website changes; the date above shows the latest revision.</p></section>
     </article>
   );
 }
